@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C3F7E"
+    tools:context=".CreateReport">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true">
+
+                <EditText
+                    android:id="@+id/reportId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:inputType="text"
+                    android:padding="9dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/imageId"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:inputType="text"
+                    android:padding="9dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/buildingId"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:inputType="text"
+                    android:padding="9dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/editBuildingName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:text="Building Name"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="75dp"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:id="@+id/roomnooo">
+
+                    <LinearLayout
+                        android:id="@+id/addRepRoomNo"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:scrollbars="horizontal"
+                        >
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/nextReport"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/reportId"
+                    android:layout_marginStart="-70dp"
+                    android:layout_toEndOf="@+id/roomnooo"
+                    android:background="@mipmap/ic_add" />
+
+
+                <Spinner
+                    android:id="@+id/selectFloor"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/editBuildingName"
+                    android:layout_marginTop="80dp"
+                    android:background="@drawable/spinner_dropdon_white"
+                    android:focusable="true"
+                    android:padding="2dp"
+                    android:spinnerMode="dropdown">
+                    <requestFocus />
+                </Spinner>
+
+                <EditText
+                    android:id="@+id/editRoomNo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/editBuildingName"
+                    android:layout_marginTop="130dp"
+                    android:background="@drawable/edittext_white_border"
+                    android:hint="Room Number"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/selectIssue"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/editBuildingName"
+                    android:layout_marginTop="180dp"
+                    android:background="@drawable/spinner_dropdon_white"
+                    android:padding="2dp"
+                    android:spinnerMode="dropdown" />
+
+                <HorizontalScrollView
+                    android:id="@+id/imgView"
+                    android:layout_width="236dp"
+                    android:layout_height="105dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="240dp">
+
+                    <LinearLayout
+                        android:id="@+id/viewImg"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/editBuildingName"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:padding="0px"
+                        android:scrollbars="horizontal">
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/selectImg"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignBottom="@+id/imgView"
+                    android:layout_alignParentEnd="true"
+                    android:background="@mipmap/ic_camera" />
+                <EditText
+                    android:id="@+id/editComments"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/editBuildingName"
+                    android:layout_below="@+id/imgView"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_white_border"
+                    android:hint="Comments"
+                    android:inputType="text"
+                    android:padding="9dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:id="@+id/editWorkId"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/editBuildingName"
+                    android:layout_below="@+id/editComments"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_white_border"
+                    android:hint="WorkId"
+                    android:inputType="text"
+                    android:padding="9dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/addReport"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/editBuildingName"
+                    android:layout_below="@+id/editWorkId"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_rounded_corners_blue"
+                    android:padding="5dp"
+                    android:text="Add Report"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/finishReport"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editWorkId"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_rounded_corners_blue"
+                    android:padding="5dp"
+                    android:text="Finish Report"
+                    android:textColor="#FFFFFF" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

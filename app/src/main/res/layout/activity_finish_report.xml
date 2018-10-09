@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C3F7E"
+    tools:context=".FinishReport">
+
+
+    <TextView
+        android:id="@+id/buildingName"
+        android:layout_width="310dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_white_border"
+        android:padding="5dp"
+        android:text="Building Name"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/reportPieChart"
+        android:layout_width="182dp"
+        android:layout_height="157dp"
+        android:layout_alignStart="@+id/buildingName"
+        android:layout_alignTop="@+id/reportListView">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+    <ListView
+        android:id="@+id/reportListView"
+        android:layout_width="150dp"
+        android:layout_height="170dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/buildingName"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="19dp"
+        android:dividerHeight="2dp"
+        android:textFilterEnabled="false">
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="251dp"
+        android:layout_height="249dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:background="#2962A9">
+
+        <ImageView
+            android:id="@+id/pdfImg"
+            android:layout_width="135dp"
+            android:layout_height="106dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="@mipmap/ic_pdf" />
+
+        <TextView
+            android:id="@+id/reportName"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdfImg"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="Report Name.pdf"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/sendPdf"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/button_rounded_corners_white"
+            android:padding="5dp"
+            android:text="SEND E-MAIL" />
+
+    </RelativeLayout>
+</RelativeLayout>
